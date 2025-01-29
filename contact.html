@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style."
+    />
+    <meta
+      name="keywords"
+      content="watches, luxury watches, buy watches online, Oceandial, premium watches"
+    />
+    <meta name="author" content="Oceandial Team" />
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    .container {
+      background: #ffffff;
+      color: #333333;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="Style/contact.css" />
+  <link rel="stylesheet" href="Style/navbar.css" />
+  <body>
+    <header class="full"></header>
+    <figure>
+      <img
+        src="Assets/Images/pwatch14.avif"
+        alt="watch"
+        class="contact-watch"
+      />
+    </figure>
+    <form id="form" onsubmit="validateForm(event);">
+      <div class="container">
+        <div class="contact">
+          <h1 style="font-size: 32px; color: #0e4b30; margin: 0">Contact Us</h1>
+          <br />
+          <p
+            style="
+              font-size: 16px;
+              margin: 0;
+              margin-bottom: 20px;
+              color: #0e4b30;
+            "
+          >
+            Feel free to contact us
+          </p>
+        </div>
+        <div class="D1">
+          <div class="Details1">
+            <input
+              type="text"
+              id="name1"
+              name="Firstname"
+              placeholder="First Name"
+            />
+            <input
+              type="text"
+              id="name"
+              name="Lastname"
+              placeholder="Last Name (optional)"
+            />
+          </div>
+          <div class="Details2">
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="number"
+              id="tel"
+              name="Phone"
+              placeholder="Phone number"
+            />
+          </div>
+        </div>
+        <div class="Details4">
+          <textarea
+            name="message"
+            id="textmessage"
+            rows="9"
+            cols="45"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <div class="Submit">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <footer class="footer"></footer>
+    <script src="Javascript/contact.js"></script>
+    <script src="Javascript/navbar_footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style.">
+    <meta name="keywords" content="watches, luxury watches, buy watches online, Oceandial, premium watches">
+    <meta name="author" content="Oceandial Team">
+    <title>About Us - Oceandial</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
+    <link rel="stylesheet" href="Style/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="Style/navbar.css">
+    <style>
+        :root {
+            --primary: #135C3B;
+            --lightprimary: #57B289;;
+            --white: #ffffff;
+            --light-gray: #ebebeb;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--primary);
+            z-index: 1000;
+            transition: width 0.2s ease;
+        }
+
+        /* Company Info Section */
+        .company-info {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-box {
+            padding: 40px;
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .info-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Team Members Section */
+        .team-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
+
+        .member-info {
+            padding: 25px;
+        }
+
+        .member-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .member-info p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 0;
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5em;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: var(--white);
+            font-size: 1.1em;
+        }
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .name{
+            margin:0;
+            padding: 0 ;
+            height: fit-content;
+        }
+
+    </style>
+</head>
+<body>
+  <header class="full"></header>
+    <!-- Company Info Section -->
+    <section class="company-info">
+        <div class="container">
+            <h2 >Our Story</h2>
+            <div class="info-content">
+                <div class="info-box" >
+                    <h3>Our Beginning</h3>
+                    <p>Oceandial began as a college project by five students who combined their expertise in design, engineering, and business to create a unique watch brand. They spent months perfecting their prototype, focusing on blending precision craftsmanship with modern aesthetics.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Our Mission</h3>
+                    <p>The mission of Oceandial is to create timeless, high-quality timepieces that blend precision craftsmanship with modern design. We strive to offer watches that not only tell time but also reflect the passion, innovation, and creativity of their creators.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Our Vision</h3>
+                    <p>We aim to become a global leader in watchmaking, known for pushing the boundaries of design, craftsmanship, and innovation. Our vision is to inspire individuals to value precision, quality, and the beauty of design in every moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" >
+                    <h3 class="counter" >9923</h3>
+                    <p>Watches Sold</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">3</h3>
+                    <p>Countries Reached</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="50">70+</h3>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="97">97%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 >Our Team</h2>
+            <div class="team-grid">
+                <!-- Team members here -->
+                <div class="ourmembers-wrapper">
+                    <div class="ourmembers">
+                        <figure class="figures">
+                            <img src="Assets/Images/samir.jpg" alt="Team Member">
+                        </figure>
+                        <div class="description">
+                            <div class="name"><h2>Samir Nepal</h2></div>
+                            <div class="email" style="margin-bottom:5px; margin-top: 0;">
+                                <p><i>np05cp4a240027@iic.edu.np</i></p>
+                            </div>
+                            <div class="contribution">
+                                <p> As the group team leader, <strong>Samir</strong> played a crucial role in developing both the home page and the product page of the website. He ensured that these pages were aesthetically pleasing, highly functional, and aligned with the project’s vision. By effectively coordinating the team's efforts, he facilitated smooth collaboration and communication.
+                                     His cooperative nature shone through as he consistently offered guidance, support, and motivation to all team members, fostering a positive and productive work environment.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="ourmembers-wrapper">
+                        <div class="ourmembers">
+                            <figure class="figures">
+                                <img src="Assets/Images/minimage.jpg" alt="Team Member">
+                            </figure>
+                            <div class="description">
+                                <div class="name"><h2>Min Kumar Pandey</h2></div>
+                                <div class="email">
+                                    <p><i>np05cp4a240017@iic.edu.np</i></p>
+                                </div>
+                                <div class="contribution">
+                                    <p><strong>Min Kumar Pandey,</strong> a group member of Oceandial has contributed to complete this Project by building About us page.
+                                     He actively participated in the project and  helped all the team members during the process. We all thank him for his hardwork and support.</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="ourmembers-wrapper">
+                            <div class="ourmembers">
+                                <figure class="figures">
+                                    <img src="Assets/Images/prasamsha.jpg" alt="Team Member">
+                                </figure>
+                                <div class="description">
+                                    <div class="name"><h2>Prasansha Bhattarai</h2></div>
+                                    <div class="email">
+                                        <p><i>np05cp4a240231@iic.edu.np</i></p>
+                                    </div>
+                                    <div class="contribution">
+                                        <p>As a group member, <strong> Prasansha</strong> was responsible for building the blog page of the website, ensuring it was visually appealing, user-friendly, and functional.
+                                             She integrated essential features such as comment sections, social media sharing buttons, and search functionalities. She has cooperative nature, she actively collaborated with group members, always willing to help others, share knowledge, and provide constructive feedback.
+            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="ourmembers-wrapper">
+                                <div class="ourmembers">
+                                    <figure class="figures">
+                                        <img src="Assets/Images/saugat.jpg" alt="Team Member">
+                                    </figure>
+                                    <div class="description">
+                                        <div class="name"><h2>Saugat Bhujel</h2></div>
+                                        <div class="email">
+                                            <P><i>np05cp4a240013@iic.edu.np</i></P>
+                                        </div>
+                                        <div class="contribution">
+                                            <p>As a key team member,<strong>Saugat</strong>  was responsible for building the "Contact Us" page of the website. He ensured the page was intuitive, accessible, and contained all necessary elements such as contact forms, maps, and social media links. Demonstrating a strong sense of collaboration, he worked closely with the design and content teams to create a cohesive and engaging user experience.
+                                                 His cooperative spirit made him a valuable asset, always ready to assist and support his teammates.</p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="ourmembers-wrapper">
+                                    <div class="ourmembers">
+                                        <figure class="figures">
+                                            <img src="Assets/Images/Anurodh.jpg" alt="Team Member">
+                                        </figure>
+                                        <div class="description">
+                                            <div class="name"><h2>Anurodh Rai</h2></div>
+                                            <div class="email">
+                                                <p><i>np05cp4a240350@iic.edu.np</i></p>
+                                            </div>
+                                            <div class="contribution">
+                                                <p>As an essential team member, <strong> Anurodh</strong> was tasked with building the research page of the website. He ensured the page was comprehensive, well-structured, and easy to navigate, showcasing various research findings and resources. His collaborative spirit was evident as he worked closely with group members to present the information effectively. 
+                                                    His dedication to supporting his teammates made him an invaluable part of the project.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+    </section>
+    <footer class="footer"></footer>
+    <!-- External Scripts -->
+     <script src="Javascript/navbar_footer.js"></script>
+</body>
+</html>

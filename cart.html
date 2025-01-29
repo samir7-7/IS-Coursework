@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style."
+    />
+    <meta
+      name="keywords"
+      content="watches, luxury watches, buy watches online, Oceandial, premium watches"
+    />
+    <meta name="author" content="Oceandial Team" />
+    <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/navbar.css" />
+    <style>
+      .cart {
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 20px 0;
+        margin-bottom: 40px;
+      }
+
+      .cart-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        width: 50vw;
+        height: 47vh;
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .cart-price-button {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50vw;
+      }
+
+      .cart-item img {
+        width: 80px;
+        height: auto;
+      }
+      .cart-summary {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .order-now {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #135c3b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      .order-now:hover {
+        background-color: #57b289;
+      }
+      .remove-btn {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .remove-btn:hover {
+        background-color: #ff1a1a;
+      }
+
+      .empty-cart {
+        justify-self: center;
+      }
+
+      .name-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        gap: 5px;
+      }
+    </style>
+  </head>
+  <body style="overflow-x: hidden">
+    <header class="full"></header>
+    <section class="cart">
+      <div class="cart-item-wrapper" id="cartItemWrapper"></div>
+      <div class="cart-price-button">
+        <div class="cart-summary" id="cartSummary"></div>
+        <button class="order-now" id="orderNow" style="display: none">
+          Order Now
+        </button>
+      </div>
+    </section>
+    <footer class="footer" style="position: relative; bottom: 0px"></footer>
+    <script src="Javascript/navbar_footer.js"></script>
+    <script>
+      const cartWrapper = document.getElementById("cartItemWrapper");
+      const cartSummary = document.getElementById("cartSummary");
+      const orderNow = document.getElementById("orderNow");
+
+      // Retrieve cart items from localStorage
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let totalPrice = 0;
+
+      const renderCart = () => {
+        cartWrapper.innerHTML = ""; // Clear the cart wrapper
+        totalPrice = 0; // Reset total price
+
+        if (cart.length > 0) {
+          if (cart.length > 3) {
+            cartWrapper.style.height = "fit-content";
+          }
+
+          cart.forEach((item, index) => {
+            const { name, price, src } = item;
+            totalPrice += price;
+
+            cartWrapper.innerHTML += `
+              <div class="cart-item" data-index="${index}">
+                <img src="${src}" alt="${name}">
+                <div class="name-price">
+                  <h4>${name}</h4>
+                  <p>$${price.toFixed(2)}</p>
+                </div>
+                <button class="remove-btn">Remove</button>
+              </div>`;
+          });
+
+          cartSummary.innerText = `Total Price: $ ${totalPrice}`;
+          orderNow.style.display = "block";
+        } else {
+          cartWrapper.innerHTML =
+            "<p class='empty-cart'>Your cart is empty.</p>";
+          cartSummary.innerText = "";
+          orderNow.style.display = "none";
+        }
+      };
+
+      // Render the cart on page load
+      renderCart();
+
+      // Remove item from cart
+      cartWrapper.addEventListener("click", (event) => {
+        if (event.target.classList.contains("remove-btn")) {
+          const itemIndex = parseInt(
+            event.target.closest(".cart-item").dataset.index
+          );
+          cart.splice(itemIndex); // Remove item from cart array
+          localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+          renderCart(); // Re-render the cart
+        }
+      });
+
+      // Handle "Order Now" button click
+      orderNow.addEventListener("click", () => {
+        alert("Thank you for your order!");
+        localStorage.removeItem("cart"); // Clear the cart
+        cart = []; // Clear the cart array
+        renderCart(); // Re-render the cart
+      });
+    </script>
+  </body>
+</html>

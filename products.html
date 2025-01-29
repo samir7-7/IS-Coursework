@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style."
+    />
+    <meta
+      name="keywords"
+      content="watches, luxury watches, buy watches online, Oceandial, premium watches"
+    />
+    <meta name="author" content="Oceandial Team" />
+    <title>Oceandial-Product Page</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
+    <style>
+      :root {
+        --primary: #135c3b;
+        --lightprimary: #57b289;
+      }
+
+      .products {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+      }
+      .card {
+        background-color: #fff;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .watchDisplay {
+        background: rgb(17, 57, 0);
+        background: linear-gradient(
+          129deg,
+          rgba(17, 57, 0, 1) 0%,
+          rgba(9, 121, 64, 1) 51%,
+          rgb(8, 130, 55) 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 42px 8px;
+        position: relative;
+        height: 200px;
+      }
+
+      .card-wrapper {
+        width: 70%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        padding: 30px 20px;
+      }
+
+      .watchdesc {
+        font-family: Helvetica, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .nameOfWatch {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .desc {
+        font-size: 12px;
+        color: #5f5e5e;
+        text-align: center;
+      }
+
+      .watchdesc > span {
+        color: #5f5e5e;
+        font-weight: lighter;
+        margin-top: 7px;
+      }
+
+      .like {
+        position: absolute;
+        z-index: 2;
+        top: 15px;
+        right: 20px;
+        background: rgba(211, 211, 211, 0.3); /* Transparent background */
+        backdrop-filter: blur(5px); /* Blur effect */
+        -webkit-backdrop-filter: blur(5px); /* For Safari support */
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .like:hover {
+        background: rgba(147, 147, 147, 0.3);
+      }
+
+      .like > i {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      #ourproducts {
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 50px;
+        border-bottom: 5px solid var(--primary);
+        width: fit-content;
+        padding: 5px 2px;
+        font-size: 40px;
+        justify-self: center;
+        border-radius: 5px;
+        color: #373737;
+      }
+
+      #ourproducts > span {
+        color: var(--primary);
+        font-family: 700;
+      }
+
+      .fullproduct-display {
+        height: 60vh;
+        width: 60vw;
+        background-color: rgb(211, 211, 211);
+        position: fixed;
+        justify-self: center;
+        z-index: 6;
+        top: 20vh;
+        display: none;
+      }
+
+      .product-image {
+        display: flex;
+        align-items: center;
+        background-color: #eeeeee;
+      }
+    </style>
+    <link rel="stylesheet" href="Style/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/navbar.css" />
+  </head>
+  <body style="overflow-x: hidden">
+    <header class="full"></header>
+    <h1 id="ourproducts">Our <span>Products</span></h1>
+    <section class="products" style="overflow-x: hidden">
+      <!-- filter section  -->
+      <section class="filters" style="align-self: flex-start; margin-top: 33px">
+        <div class="search">
+          <label for="searchBar">Search:</label>
+          <input type="text" id="searchBar" placeholder="Search by name..." />
+        </div>
+        <div class="price-range">
+          <label for="priceRange">Price Range: </label>
+          <input
+            type="range"
+            id="priceRange"
+            min="100"
+            max="5000"
+            value="5000"
+            step="50"
+          /><br />
+          <span id="priceValue">$ 5000</span>
+        </div>
+        <div class="categories">
+          <label>Category:</label>
+          <input type="checkbox" id="analog" value="Analog" /> Analog
+          <input type="checkbox" id="smart" value="Smart" /> Smart
+        </div>
+      </section>
+
+      <!-- full product display section  -->
+      <section class="fullproduct-display"></section>
+
+      <!-- product card wrapper  -->
+      <div class="card-wrapper" id="cardWrapper"></div>
+    </section>
+    <footer class="footer"></footer>
+    <script src="Javascript/navbar_footer.js"></script>
+    <script src="Javascript/cart.js"></script>
+    <script>
+      cardWrapper = document.getElementById("cardWrapper");
+      const jsonFile = "watches.json";
+      const priceRange = document.getElementById("priceRange");
+      const priceValue = document.getElementById("priceValue");
+      const searchBar = document.getElementById("searchBar");
+      const filters = {
+        categories: [],
+        searchQuery: "",
+        maxPrice: 5000,
+      };
+
+      // Update filters on price change
+      priceRange.addEventListener("input", (e) => {
+        filters.maxPrice = parseInt(e.target.value);
+        priceValue.innerText = `$ ${filters.maxPrice}`;
+        renderFilteredProducts();
+      });
+
+      // Update filters on category checkbox change
+      document.querySelectorAll(".categories input").forEach((checkbox) => {
+        checkbox.addEventListener("change", (e) => {
+          const value = e.target.value;
+          if (e.target.checked) {
+            filters.categories.push(value);
+          } else {
+            filters.categories = filters.categories.filter(
+              (category) => category !== value
+            );
+          }
+          renderFilteredProducts();
+        });
+      });
+
+      // Update filters on search bar input
+      searchBar.addEventListener("input", (e) => {
+        filters.searchQuery = e.target.value.toLowerCase();
+        renderFilteredProducts();
+      });
+
+      // Fetch JSON and initialize product rendering
+      fetch(jsonFile)
+        .then((response) => response.json())
+        .then((data) => {
+          window.productData = data;
+          renderFilteredProducts();
+        });
+
+      // Render filtered products
+      const renderFilteredProducts = () => {
+        const filteredProducts = window.productData.filter((product) => {
+          const matchesPrice = product.price <= filters.maxPrice;
+          const matchesCategory =
+            filters.categories.length === 0 ||
+            filters.categories.includes(product.category);
+          const matchesSearch =
+            filters.searchQuery === "" ||
+            product.name.toLowerCase().includes(filters.searchQuery);
+          return matchesPrice && matchesCategory && matchesSearch;
+        });
+
+        cardWrapper.innerHTML = filteredProducts
+          .map(
+            (product) => `
+      <div class="card" data-id="${product.id}">
+        <div class="watchDisplay">
+          <img src="${product.src}" alt="${product.name}" width="200px" />
+        </div>
+        <div class="watchdesc">
+          <p class="nameOfWatch">${product.name}</p>
+          <p class="desc">${product.desc}</p>
+          <span>$${product.price}</span>
+        </div>
+      </div>`
+          )
+          .join("");
+      };
+    </script>
+    <script src="Javascript/product.js"></script>
+  </body>
+</html>

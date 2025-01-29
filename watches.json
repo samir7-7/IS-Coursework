@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "src": "Assets/Images/pwatch.avif",
+    "name": "Elegant Rose Gold Watch",
+    "price": 299,
+    "desc": "39.7 mm, rose gold plated steel on leather, timeless elegance.",
+    "rating": 4.3,
+    "category": "Analog"
+  },
+  {
+    "id": 2,
+    "src": "Assets/Images/pwatch2.avif",
+    "name": "Blue Ocean Dive Watch",
+    "price": 349,
+    "desc": "42 mm, stainless steel on silicone, water-resistant to 200 meters.",
+    "rating": 4.9,
+    "category": "Analog"
+  },
+  {
+    "id": 3,
+    "src": "Assets/Images/pwatch3.avif",
+    "name": "Bold Orange Diver's Watch",
+    "price": 399,
+    "desc": "44 mm, rugged steel case with orange silicone strap, unyielding durability.",
+    "rating": 4.5,
+    "category": "Analog"
+  },
+  {
+    "id": 4,
+    "src": "Assets/Images/pwatch4.avif",
+    "name": "Classic Dual Tone Watch",
+    "price": 449,
+    "desc": "40 mm, stainless steel and gold-tone bracelet, a sophisticated look.",
+    "rating": 4.8,
+    "category": "Analog"
+  },
+  {
+    "id": 5,
+    "src": "Assets/Images/pwatch5.avif",
+    "name": "Modern Blue Strap Watch",
+    "price": 329,
+    "desc": "41 mm, stainless steel with a sporty blue silicone strap.",
+    "rating": 4.1,
+    "category": "Analog"
+  },
+  {
+    "id": 6,
+    "src": "Assets/Images/pwatch6.avif",
+    "name": "Vintage Leather Watch",
+    "price": 259,
+    "desc": "38 mm, polished steel on brown leather, vintage charm.",
+    "rating": 3.3,
+    "category": "Analog"
+  },
+  {
+    "id": 7,
+    "src": "Assets/Images/pwatch7.avif",
+    "name": "Minimalist Silver Watch",
+    "price": 199,
+    "desc": "37 mm, brushed stainless steel on mesh strap, clean and modern.",
+    "rating": 3.3,
+    "category": "Analog"
+  },
+  {
+    "id": 8,
+    "src": "Assets/Images/pwatch8.avif",
+    "name": "Golden Luxe Watch",
+    "price": 499,
+    "desc": "40.5 mm, solid gold-tone stainless steel bracelet, pure luxury.",
+    "rating": 3.9,
+    "category": "Analog"
+  },
+  {
+    "id": 9,
+    "src": "Assets/Images/pwatch9.avif",
+    "name": "Slimline White Dial Watch",
+    "price": 149,
+    "desc": "36 mm, lightweight steel on leather, minimal aesthetic.",
+    "rating": 3.3,
+    "category": "Analog"
+  },
+  {
+    "id": 10,
+    "src": "Assets/Images/pwatch10.avif",
+    "name": "Rugged Green Strap Watch",
+    "price": 275,
+    "desc": "42 mm, toughened steel with a bold green nylon strap.",
+    "rating": 4.1,
+    "category": "Analog"
+  },
+  {
+    "id": 11,
+    "src": "Assets/Images/pwatch11.avif",
+    "name": "Silver Bronze Strap Watch",
+    "price": 975,
+    "desc": "42 mm, toughened steel with a bold bronze strap.",
+    "rating": 4.1,
+    "category": "Analog"
+  },
+  {
+    "id": 12,
+    "src": "Assets/Images/pwatch12.avif",
+    "name": "Black Leather Strap Watch",
+    "price": 775,
+    "desc": "42 mm, polished bronze on black leather, vintage charm.",
+    "rating": 3.7,
+    "category": "Analog"
+  },
+  {
+    "id": 13,
+    "src": "Assets/Images/pwatch13.avif",
+    "name": "Cosmograph Daytona",
+    "price": 4065,
+    "desc": "42 mm, toughened steel with a bold bronze strap.",
+    "rating": 3.3,
+    "category": "Analog"
+  },
+  {
+    "id": 14,
+    "src": "Assets/Images/pwatch14.avif",
+    "name": "Datejust 31",
+    "price": 2305,
+    "desc": "42 mm, toughened steel with a bold bronze strap.",
+    "rating": 4.7,
+    "category": "Analog"
+  },
+  {
+    "id": 15,
+    "src": "Assets/Images/pwatch15.avif",
+    "name": "Submariner Date",
+    "price": 2000,
+    "desc": "41 mm, Oystersteel.",
+    "rating": 3.0,
+    "category": "Analog"
+  },
+  {
+    "id": 17,
+    "src": "Assets/Images/pwatch17.png",
+    "name": "Samsung Galaxy Watch 5",
+    "price": 279,
+    "desc": "40mm, AMOLED display, health monitoring, and sleek design.",
+    "rating": 3.4,
+    "category": "Smart"
+  },
+  {
+    "id": 18,
+    "src": "Assets/Images/pwatch18.png",
+    "name": "Amazfit GTS 2 Mini",
+    "price": 99,
+    "desc": "Lightweight, 1.55-inch AMOLED screen, and all-day fitness tracking.",
+    "rating": 4.7,
+    "category": "Smart"
+  },
+  {
+    "id": 19,
+    "src": "Assets/Images/pwatch19.webp",
+    "name": "Honor Watch GS 3",
+    "price": 200,
+    "desc": "45.9mm, premium design, AMOLED display, and precise health tracking.",
+    "rating": 3.2,
+    "category": "Smart"
+  },
+  {
+    "id": 20,
+    "src": "Assets/Images/pwatch20.png",
+    "name": "Casio Pro Trek Smart",
+    "price": 350,
+    "desc": "50.8mm, designed for outdoor activities with GPS and mapping features.",
+    "rating": 3.0,
+    "category": "Smart"
+  },
+  {
+    "id": 21,
+    "src": "Assets/Images/pwatch21.avif",
+    "name": "TAG Heuer Connected Calibre E4",
+    "price": 2200,
+    "desc": "45mm, luxury smartwatch with TAG Heuer's signature design.",
+    "rating": 4,
+    "category": "Smart"
+  },
+  {
+    "id": 22,
+    "src": "Assets/Images/pwatch22.png",
+    "name": "Huawei Watch 3 Pro",
+    "price": 399,
+    "desc": "48mm, titanium case, and long-lasting battery life.",
+    "rating": 3.1,
+    "category": "Smart"
+  }
+]

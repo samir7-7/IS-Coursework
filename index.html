@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style."
+    />
+    <meta
+      name="keywords"
+      content="watches, luxury watches, buy watches online, Oceandial, premium watches"
+    />
+    <meta name="author" content="Oceandial Team" />
+    <title>Oceandial</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
+    <link rel="stylesheet" href="Style/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+    <style>
+      .card {
+        background-color: #fff;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .watchDisplay {
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 42px 8px;
+        position: relative;
+        height: 200px;
+      }
+
+      .card-wrapper {
+        width: 70%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        padding: 30px 20px;
+      }
+
+      .watchdesc {
+        font-family: Helvetica, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .nameOfWatch {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .desc {
+        font-size: 12px;
+        color: #5f5e5e;
+        text-align: center;
+      }
+
+      .watchdesc > span {
+        color: #5f5e5e;
+        font-weight: lighter;
+        margin-top: 7px;
+      }
+
+      hr {
+        background-color: rgba(222, 222, 222, 0.2);
+        font-weight: 700;
+        width: 50vw;
+        justify-self: center;
+      }
+    </style>
+  </head>
+  <body style="overflow-x: hidden">
+    <header class="full"></header>
+    <main>
+      <dialog open id="dialogf">
+        <div>
+          <h1>Grab this hot offer!!</h1>
+          <p>70% off on every analog watch</p>
+          <div class="countdown"></div>
+          <figure>
+            <img
+              src="Assets/Images/discount.png"
+              alt="discount offer png"
+              width="200px"
+            />
+          </figure>
+        </div>
+        <div class="closedialog">
+          <i class="fa-solid fa-xmark close-dialog"></i>
+        </div>
+      </dialog>
+      <figure class="videocontainer">
+        <div class="transblack">
+          <h1>Oceandial.</h1>
+          <div class="scroll">
+            <p>Scroll to discover more</p>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+
+        <video
+          src="Assets/Videos/homepage vid.mov"
+          autoplay
+          loop
+          muted
+          style="max-width: 100vw"
+        ></video>
+      </figure>
+      <section
+        class="productInfo"
+        style="
+          padding: 50px;
+          width: 50vw;
+          justify-self: center;
+          font-family: Helvetica, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <div
+          class="productinfoHeading"
+          style="color: #135c3b; margin: 50px 0; font-size: 25px"
+        >
+          <h1>We are best on the market</h1>
+        </div>
+        <div
+          class="productInfoinner"
+          style="
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <figure>
+            <img
+              src="Assets/Images/omegawatch.avif"
+              alt="omega watch"
+              height="400px"
+            />
+          </figure>
+          <article style="width: 40%; line-height: 25px">
+            At Oceandial we are not just about watches but the connections we
+            build are timeless. Drawing from the concept of beauty in horologe
+            making, our pieces illustrate precision, class and resilience. Each
+            watch listed here is a symbol of craftsmanship and development heard
+            of in horology and timekeeping. Whether traditional or modern and
+            elegant, Oceandial is perfect for clients who look for the true
+            value of perfect jewel.
+          </article>
+        </div>
+        <br />
+        <div
+          class="productInfoinner"
+          style="
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <figure>
+            <img
+              src="Assets/Images/omegawatch2.avif"
+              alt="omega watch"
+              height="400px"
+            />
+          </figure>
+          <article style="width: 40%; line-height: 25px">
+            A watch is not only an object, which is used to tell the time; it is
+            the statements of your personality. At Oceandial Outlet, we
+            appreciate that you get to wear what you feel best describes you and
+            your goals. No matter if it’s to celebrate significant events, give
+            your business/outside appearance a more elegant look, or just to let
+            the world know that you are the one wearing it. Browsing through our
+            selection discover a watch that is as unique as you are.
+          </article>
+        </div>
+      </section>
+      <hr />
+      <section
+        class="newarrivals"
+        style="
+          color: #135c3b;
+          margin: 50px 0;
+          font-size: 25px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-self: center;
+          gap: 20px;
+        "
+      >
+        <h1 style="font-family: Helvetica, sans-serif">You may like</h1>
+        <div>
+          <div class="card-wrapper">
+            <div class="card" data-id="${id}">
+              <div class="watchDisplay">
+                <figure>
+                  <img
+                    src="Assets/Images/pwatch9.avif"
+                    alt="watch"
+                    width="200px"
+                  />
+                </figure>
+              </div>
+              <div class="watchdesc">
+                <p class="nameOfWatch" style="text-transform: uppercase">
+                  Slimline White Dial Watch
+                </p>
+                <p class="desc" style="margin: 7px; padding: 0">
+                  36 mm, lightweight steel on leather, minimal aesthetic.
+                </p>
+                <span>$ 149</span>
+              </div>
+            </div>
+
+            <div class="card" data-id="${id}">
+              <div class="watchDisplay">
+                <figure>
+                  <img
+                    src="Assets/Images/pwatch2.avif"
+                    alt="watch"
+                    width="200px"
+                  />
+                </figure>
+              </div>
+              <div class="watchdesc">
+                <p class="nameOfWatch" style="text-transform: uppercase">
+                  Blue Ocean Dive Watch
+                </p>
+                <p class="desc" style="margin: 7px; padding: 0">
+                  42 mm, stainless steel on silicone, water-resistant to 200
+                  meters.
+                </p>
+                <span>$ 349</span>
+              </div>
+            </div>
+
+            <div class="card" data-id="${id}">
+              <div class="watchDisplay">
+                <figure>
+                  <img
+                    src="Assets/Images/pwatch10.avif"
+                    alt="watch"
+                    width="200px"
+                  />
+                </figure>
+              </div>
+              <div class="watchdesc">
+                <p class="nameOfWatch" style="text-transform: uppercase">
+                  Rugged Green Strap Watch
+                </p>
+                <p class="desc" style="margin: 7px; padding: 0">
+                  42 mm, toughened steel with a bold green nylon strap.
+                </p>
+                <span>$ 275</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="catagories">
+        <h1>Product Categories</h1>
+        <div class="catagories-wrapper">
+          <div class="catagories-card">
+            <div class="img-holder"></div>
+            <span>Analog Watch</span>
+          </div>
+          <div class="catagories-card">
+            <div class="img-holder"></div>
+            <span>Digital Watch</span>
+          </div>
+          <div class="catagories-card">
+            <div class="img-holder"></div>
+            <span>Smart Watch</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter section  -->
+      <section class="newsletter" style="display: flex">
+        <div class="newsletter-box">
+          <figure>
+            <img
+              src="Assets/Images/undraw_subscriber_whh0.svg"
+              alt="newsletter vector art"
+            />
+          </figure>
+          <h2>Subscribe to our newsletter</h2>
+          <form action="" class="newsletter-form">
+            <input
+              type="email"
+              name="email"
+              id="newsemail"
+              placeholder="Enter your email"
+            />
+            <button class="newsletter-signup">Sign Up</button>
+          </form>
+        </div>
+      </section>
+      <footer class="footer"></footer>
+    </main>
+    <script>
+      let dialog = document.querySelector("dialog");
+      let closedialog = document.querySelector(".close-dialog");
+      closedialog.addEventListener("click", () => {
+        dialog.style.display = "none";
+      });
+    </script>
+    <script src="Javascript/script.js"></script>
+    <script src="Javascript/navbar_footer.js"></script>
+    <script>
+      // code to create light effect in homepage
+      let dark = document.querySelector(".transblack");
+      dark.addEventListener("mousemove", (e) => {
+        dark.style.setProperty("--x", e.clientX + "px");
+        dark.style.setProperty("--y", e.clientY - 100 + "px");
+      });
+    </script>
+  </body>
+</html>

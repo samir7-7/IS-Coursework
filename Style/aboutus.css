@@ -1,0 +1,72 @@
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.ourmembers-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ourmembers {
+  display: flex;
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-height: 300px;
+  align-items: center;
+  height: 20vh;
+}
+
+.ourmembers:hover {
+  transform: translateY(-5px);
+}
+
+.figures {
+  flex: 0 0 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.figures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ourmembers:hover .figures img {
+  transform: scale(1.1);
+}
+
+.description {
+  flex: 1;
+  height: 20vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name h2 {
+  font-size: 1.8em;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.contribution p {
+  color: var(--text-light);
+  line-height: 1.2;
+  margin-bottom: 7px;
+}
+
+.email p{
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+

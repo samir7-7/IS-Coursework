@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(214, 214, 214);
+  color: rgb(233, 247, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 40px 0;
+  padding:0;
+  box-sizing: border-box;
+  height: 650px;
+  padding: 20px;
+  background-color: #ffffffe7;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: relative;
+  z-index: 5;
+} 
+
+.Submit{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.Submit button{
+  height:40px;
+  border:none;
+  padding:10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  width:250px;
+
+
+}
+
+.contact{
+text-align: center;
+}
+
+input{
+  height:35px;
+  border: 12px;
+  width: 300px;
+  border-radius: 12px;
+  outline:none;
+
+}
+
+.Details1{
+  display: flex;
+  gap:25px;
+
+}
+
+.Details2{
+display:flex;
+gap:25px;
+padding-top: 20px;
+
+}
+
+select{
+  padding-right: 95px;
+  height:40px
+}
+
+
+.messagebox{
+  width:375px;  
+}
+
+
+.Details4 input{
+  height: 100px;
+  width: 500px;
+
+}
+
+.Details4{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.attachment{
+  margin-right: 10px;
+}
+
+
+.btn-submit{
+  margin-left: 10px;
+}
+
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn-submit {
+  background-color:#135C3B;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: #57B289;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.file{
+  padding: 10px 65px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #135C3B;
+  color:white;
+
+}
+
+.file:hover{
+  background-color: #57B289;
+}
+
+.contact-watch{
+  top: 160px;
+  height: 550px;
+  position: absolute;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

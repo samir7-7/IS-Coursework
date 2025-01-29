@@ -1,0 +1,354 @@
+:root{
+  --primary: #135C3B;
+  --lightprimary: #57B289;
+}
+
+.main{
+  overflow-x: hidden;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  color: #fff;
+  width: 80%;
+}
+
+.left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.left:hover{
+  color: var(--lightprimary);
+  cursor: pointer;
+}
+
+.right{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon>span{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.icons>a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+nav i{
+  font-size: 20px;
+}
+
+
+/* for full screen nav  */
+.full{
+  height: 15vh;
+  width: 100vw;
+  background-color: var(--primary);
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease;
+  overflow: hidden;
+  position: sticky;
+  z-index: 8;
+  top: 0;
+}
+
+.close{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fnav{
+  width: 80%;
+  height: fit-content;
+  padding: 30px 10px;
+}
+
+.content{
+  width: 80%;
+  min-height: 70%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.leftside{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.sleft{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sleft>i{
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+
+.sleft>p{
+  color: #fff;
+  font-size: 13px;
+}
+
+.fleft{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: fit-content;
+}
+
+.fleft>a{
+  transition: 0.5s ease;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navcontact>a>button{
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 15ppx;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;;
+}
+
+.navcontact>a>button:hover{
+  background-color: var(--lightprimary);
+}
+
+/* this will apply this effect to all spans which are direct child of .fleft class */
+.fleft>a:hover{
+  color: var(--lightprimary);
+  cursor: pointer;
+}
+
+/* hover means when curser is placed over that element  */
+.close:hover{
+  color: var(--lightprimary);
+  cursor: pointer;
+}
+
+.fright{
+  color: #fff;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.fright>h1{
+  font-size: 44px;
+  font-weight: 700;
+}
+
+/* class to toggle */
+.fullHeight{
+  height: 100vh;
+}
+
+/* this css is for the watch image slider */
+.slider{
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 100px;
+  scroll-behavior: smooth;
+}
+
+.slider div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  flex: none;
+}
+
+.slider div img{
+  width: 330px;
+  transition: 0.5s ease;
+}
+
+.slider div img:hover{
+  transform: scale(1.01);
+}
+
+.slider-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* to hide scrollbar  */
+.slider::-webkit-scrollbar{
+  display: none;
+}
+
+#leftbtn>i{
+  font-size: 20px;
+}
+
+#rightbtn>i{
+  font-size: 20px;
+}
+
+#leftbtn{
+  position: absolute;
+  left: 30px;
+  z-index: 1;
+  background: rgba(56, 56, 56, 0.3); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari support */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+#rightbtn{
+  position: absolute;
+  right: 30px;
+  z-index: 1;
+  background: rgba(56, 56, 56, 0.3); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari support */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main{
+  overflow-x: hidden;
+}
+
+
+
+/* footer css */
+footer{
+  background-color: #cdcdcd;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 100vw;
+  justify-content: center;
+  font-family:  Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+footer>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 10px 15px;
+}
+
+.footerleft>p{
+  color: rgb(129, 128, 128);
+}
+
+.footerlinks>a{
+  text-decoration: none;
+  color: rgb(55, 55, 55);
+  transition: 0.5s ease;
+}
+
+.footerlinks>a:hover{
+  color: var(--primary);
+  text-decoration: underline;
+}
+ 
+.footermiddle>img{
+  width: 100px;
+  filter: invert(40%);
+}
+
+.footerright>.sociallinks{
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(129, 128, 128);
+  padding: 10px 0;
+}
+
+.footerright>h3{
+  color: rgb(53, 53, 53);
+}
+
+.footerright>p{
+  color: rgb(55, 55, 55);
+}
+
+.footerright>.sociallinks>i:hover{
+  color: #135C3B;
+}
+
+.noofItems{
+  background-color: #57B289;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+a>.icon{
+  position: relative;
+}
