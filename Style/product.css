@@ -1,3 +1,4 @@
+/* Styles for the product description container */
 .product-description {
   display: flex;
   position: relative;
@@ -8,20 +9,24 @@
   margin-top: 40px;
 }
 
+/* Styling for the product description heading */
 .product-description > h2 {
   color: var(--primary);
 }
 
+/* Styling for the product description paragraph */
 .product-description > p {
   color: gray;
 }
 
+/* Styling for the product price or special text */
 .product-description > span {
   font-size: 25px;
   font-weight: bold;
   color: #373737;
 }
 
+/* Styles for the quantity selector container */
 .quantity {
   display: flex;
   gap: 7px;
@@ -29,6 +34,7 @@
   align-items: center;
 }
 
+/* Styles for add and minus buttons in the quantity selector */
 .add-minus {
   background-color: #f3f1f1;
   padding: 5px;
@@ -38,6 +44,7 @@
   cursor: pointer;
 }
 
+/* Close button for modal or pop-up */
 #full-close {
   position: absolute;
   font-size: 25px;
@@ -47,6 +54,7 @@
   cursor: pointer;
 }
 
+/* Styles for the add-to-cart button */
 .add-to-cart {
   background-color: var(--primary);
   color: #fff;
@@ -58,10 +66,12 @@
   font-weight: bold;
 }
 
+/* Hover effect for the add-to-cart button */
 .add-to-cart:hover {
   background-color: var(--lightprimary);
 }
 
+/* Styling for product ratings (e.g., stars) */
 .ratings {
   display: flex;
   gap: 5px;
@@ -69,6 +79,7 @@
   font-size: 20px;
 }
 
+/* Styles for filter section */
 .filters {
   padding: 20px 10px;
   height: 30vh;
@@ -80,6 +91,7 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* Styling for range input sliders */
 input[type="range"] {
   -webkit-appearance: none;
   width: 50%;
@@ -88,6 +100,7 @@ input[type="range"] {
   border-radius: 5px;
 }
 
+/* Styling for the range input thumb */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -98,12 +111,14 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
+/* Styles for text input fields */
 input[type="text"] {
   padding: 10px 15px;
   border-radius: 20px;
   border: none;
 }
 
+/* Styles for checked checkboxes */
 input[type="checkbox"]:checked {
   background-color: var(--primary);
 }

@@ -1,7 +1,7 @@
 .blog-content {
   flex: 1;
-  max-width: 60%;
-  margin-right: 20px;
+  max-width: 60%; /* Limit the width of blog content */
+  margin-right: 20px; /* Space to the right */
 }
 
 .blog-content h2 {
@@ -19,25 +19,25 @@
 }
 
 .blog-content a {
-  color:  #135C3B;
+  color: #135C3B;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1rem;
 }
 
 .blog-content a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
 .image {
-  width: 200px;
-  height: fit-content;
-  overflow-y: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Fixed width for images */
+  height: fit-content; /* Height based on content */
+  overflow-y: hidden; /* Hide overflow */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
 .image img {
-  width: 100%;
+  width: 100%; /* Ensure image fills container */
   height: 100%;
 }

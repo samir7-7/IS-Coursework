@@ -27,7 +27,7 @@
       padding: 30px;
       border-radius: 10px;
       width: 90%;
-      max-width: 600px;
+      max-width: 600px; /* Max width for container */
       text-align: center;
     }
   </style>
@@ -35,14 +35,19 @@
   <link rel="stylesheet" href="Style/navbar.css" />
   <body>
     <header class="full"></header>
+    <!-- Placeholder for the navigation header -->
+
     <figure>
       <img
         src="Assets/Images/pwatch14.avif"
         alt="watch"
         class="contact-watch"
       />
+      <!-- Watch image -->
     </figure>
+
     <form id="form" onsubmit="validateForm(event);">
+      <!-- Form for contact -->
       <div class="container">
         <div class="contact">
           <h1 style="font-size: 32px; color: #0e4b30; margin: 0">Contact Us</h1>
@@ -66,21 +71,25 @@
               name="Firstname"
               placeholder="First Name"
             />
+            <!-- First name input -->
             <input
               type="text"
               id="name"
               name="Lastname"
               placeholder="Last Name (optional)"
             />
+            <!-- Last name input -->
           </div>
           <div class="Details2">
             <input type="email" id="email" name="email" placeholder="Email" />
+            <!-- Email input -->
             <input
               type="number"
               id="tel"
               name="Phone"
               placeholder="Phone number"
             />
+            <!-- Phone number input -->
           </div>
         </div>
         <div class="Details4">
@@ -91,14 +100,20 @@
             cols="45"
             placeholder="Message"
           ></textarea>
+          <!-- Message textarea -->
         </div>
         <div class="Submit">
           <button type="submit" class="btn-submit">Submit</button>
+          <!-- Submit button -->
         </div>
       </div>
     </form>
+
     <footer class="footer"></footer>
+    <!-- Placeholder for footer -->
     <script src="Javascript/contact.js"></script>
+    <!-- JavaScript for form validation -->
     <script src="Javascript/navbar_footer.js"></script>
+    <!-- JavaScript for navbar and footer -->
   </body>
 </html>

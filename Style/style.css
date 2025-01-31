@@ -1,9 +1,11 @@
-:root{
+/* Root variables for primary and light primary colors */
+:root {
   --primary: #135C3B;
   --lightprimary: #57B289;
 }
 
-dialog{
+/* Styling for the dialog (modal) */
+dialog {
   background-color: var(--primary);
   z-index: 99;
   width: 400px;
@@ -17,10 +19,11 @@ dialog{
   justify-content: center;
   color: #fff;
   text-align: center;
-  font-family:Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-dialog>div{
+/* Styling for elements inside the dialog */
+dialog > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,13 +31,15 @@ dialog>div{
   gap: 20px;
 }
 
-dialog i{
+/* Styling for close icon inside the dialog */
+dialog i {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.scroll{
+/* Styling for the scrolling text or button */
+.scroll {
   position: absolute;
   bottom: 0;
   color: #fff;
@@ -46,7 +51,8 @@ dialog i{
   gap: 10px;
 }
 
-.transblack{
+/* Styling for a dark transparent background overlay */
+.transblack {
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -55,12 +61,14 @@ dialog i{
   justify-content: center;
   align-items: center;
   background: radial-gradient(
-          circle at var(--x) var(--y),
-          transparent 5%,
-          rgba(0, 0, 0, 0.85) 20%);
+    circle at var(--x) var(--y),
+    transparent 5%,
+    rgba(0, 0, 0, 0.85) 20%
+  );
 }
 
-.videocontainer{
+/* Styling for video container */
+.videocontainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,40 +76,32 @@ dialog i{
   width: fit-content;
 }
 
-.transblack>h1{
+/* Styling for heading inside the transblack overlay */
+.transblack > h1 {
   color: #fff;
   font-size: 100px;
 }
 
-/* this css is for product info section  */
-
-.productInfoinner>article{
+/* Styling for product info section */
+.productInfoinner > article {
   width: 200px;
 }
 
-
-/* this code is for why choose us section  */
-.newarrivals{
+/* Styling for "Why Choose Us" section */
+.newarrivals {
   width: 90vw;
 }
 
-/* .newarrivals>div{
-  background-color: #F9F9F9;
-  width: 80%;
-  height: 80vh;
-  position: relative;
-} */
-
-.newarrivals>div>figure{
+/* Styling for images in the "Why Choose Us" section */
+.newarrivals > div > figure {
   position: absolute;
   top: 20%;
   right: -10%;
 }
 
-
-/* this css is for catagories section  */
-.catagories{
-  max-width:100%;
+/* Styling for the categories section */
+.catagories {
+  max-width: 100%;
   height: 40vh;
   display: flex;
   flex-direction: column;
@@ -111,14 +111,16 @@ dialog i{
   gap: 30px;
 }
 
-.catagories>h1{
+/* Styling for the heading inside the categories section */
+.catagories > h1 {
   color: #135C3B;
   font-family: Helvetica, sans-serif;
   font-size: 38px;
   font-weight: 700;
 }
 
-.catagories-wrapper{
+/* Wrapper for category items */
+.catagories-wrapper {
   width: 100%;
   height: 95%;
   justify-self: center;
@@ -129,7 +131,8 @@ dialog i{
   background-color: #F9F9F9;
 }
 
-.catagories-card{
+/* Styling for individual category cards */
+.catagories-card {
   width: 250px;
   height: fit-content;
   display: flex;
@@ -140,40 +143,43 @@ dialog i{
   padding: 10px 7px;
 }
 
-.img-holder{
+/* Styling for the image holders inside category cards */
+.img-holder {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   transition: 1.4s ease;
   background-size: cover;
 }
 
-.catagories-wrapper>.catagories-card:nth-child(1)>.img-holder{
+/* Background images for category cards */
+.catagories-wrapper > .catagories-card:nth-child(1) > .img-holder {
   background-image: url('../Assets/Images/analogwatch.jpg');
 }
 
-.catagories-wrapper>.catagories-card:nth-child(2)>.img-holder{
+.catagories-wrapper > .catagories-card:nth-child(2) > .img-holder {
   background-image: url('../Assets/Images/digitalwatch.jpg');
 }
 
-.catagories-wrapper>.catagories-card:nth-child(3)>.img-holder{
+.catagories-wrapper > .catagories-card:nth-child(3) > .img-holder {
   background-image: url('../Assets/Images/smartwatch.jpeg');
 }
 
-.img-holder:hover{
+/* Hover effect for category images */
+.img-holder:hover {
   transform: scale(1.06);
 }
 
-.catagories-card>span{
+/* Styling for text inside category cards */
+.catagories-card > span {
   font-family: Helvetica, sans-serif;
 }
 
-
-
-/* css for newsletter */
-.newsletter{
-  display:flex;
+/* Styling for the newsletter section */
+.newsletter {
+  display: flex;
   max-width: 100vw;
   height: fit-content;
   flex-direction: column;
@@ -184,12 +190,14 @@ dialog i{
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.newsletter-box>p{
+/* Styling for paragraph inside the newsletter box */
+.newsletter-box > p {
   color: #333;
   z-index: 5;
 }
 
-.newsletter-box{
+/* Styling for the newsletter box */
+.newsletter-box {
   width: 50%;
   height: 350px;
   display: flex;
@@ -203,14 +211,16 @@ dialog i{
   overflow-y: hidden;
 }
 
-.newsletter-form{
+/* Styling for the newsletter form */
+.newsletter-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
 
-#newsemail{
+/* Styling for the email input field */
+#newsemail {
   border-radius: 30px;
   padding: 15px 10px;
   border: 1px solid gray;
@@ -218,7 +228,8 @@ dialog i{
   width: 120%;
 }
 
-.newsletter-signup{
+/* Styling for the newsletter signup button */
+.newsletter-signup {
   border: none;
   background-color: var(--primary);
   color: #fff;
@@ -229,17 +240,15 @@ dialog i{
   cursor: pointer;
 }
 
-.newsletter-signup:hover{
+/* Hover effect for the signup button */
+.newsletter-signup:hover {
   background-color: #57B289;
 }
 
-.newsletter-box>figure>img{
+/* Styling for images inside the newsletter box */
+.newsletter-box > figure > img {
   position: absolute;
   height: 180px;
   left: 25px;
   bottom: -2px;
 }
-
-
-
-

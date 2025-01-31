@@ -1,32 +1,37 @@
+/* Reset default margin, padding, and enable border-box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styles for the body */
 body {
   line-height: 1.8;
   background-color: #f8f9fa;
   color: #343a40;
   font-family: Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+/* Container for the blog content */
 .blogcontainer {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the container */
   padding: 0 20px;
 }
 
+/* Featured image styling */
 .featured-image {
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: cover; /* Ensures image covers the given area */
   border-radius: 12px;
   margin: 2rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
+/* Article container styles */
 article {
   background: white;
   padding: 3rem;
@@ -35,18 +40,21 @@ article {
   margin-bottom: 2rem;
 }
 
+/* Article heading styles */
 article h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #135c3b;
+  color: #135c3b; /* Dark green for contrast */
 }
 
+/* Paragraph styles inside articles */
 article p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   color: #495057;
 }
 
+/* Author information section */
 .author-info {
   display: flex;
   align-items: center;
@@ -57,19 +65,22 @@ article p {
   border-radius: 8px;
 }
 
+/* Author avatar styling */
 .author-info img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular image */
   object-fit: cover;
 }
 
+/* Social share button container */
 .social-share {
   display: flex;
   gap: 1rem;
   margin: 2rem 0;
 }
 
+/* Styling for social share buttons */
 .social-share button {
   padding: 0.5rem 1rem;
   border: none;
@@ -80,17 +91,20 @@ article p {
   transition: transform 0.2s ease;
 }
 
+/* Button hover effect */
 .social-share button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
+/* Related posts grid layout */
 .related-posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
+/* Related post card styles */
 .related-post-card {
   background: white;
   border-radius: 8px;
@@ -99,17 +113,25 @@ article p {
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for related post cards */
 .related-post-card:hover {
   transform: translateY(-5px);
 }
 
+/* Image inside related post cards */
 .related-post-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
 
+/* Title inside related post cards */
 .related-post-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
+}
+
+.related-post-card a{
+  text-decoration: none;
+  color: #333;
 }

@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta information -->
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      blog-blog-content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Oceandial - Premium watches with timeless designs. Find the perfect watch to match your style."
@@ -16,7 +12,6 @@
       content="watches, luxury watches, buy watches online, Oceandial, premium watches"
     />
     <meta name="author" content="Oceandial Team" />
-
     <title>Our Blogs - Oceandial</title>
     <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico" />
     <link rel="stylesheet" href="Style/navbar.css" />
@@ -37,7 +32,7 @@
         background-color: #f9f9f9;
         color: #a6a4a4;
         line-height: 1.6;
-        overflow-x: hidden;
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
 
       .blogs-heading {
@@ -49,37 +44,32 @@
       }
 
       .blog-container {
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1200px; /* Max width for container */
+        margin: 0 auto; /* Center container */
         padding: 20px;
       }
 
       .episode {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: flex; /* Flex layout for episodes */
+        justify-content: space-between; /* Space between content and image */
+        align-items: flex-start; /* Align items to the top */
         background-color: #fff;
         margin-bottom: 30px;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        transition: all 0.3s ease-in-out; /* Smooth transition */
       }
 
       .episode:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px); /* Lift effect on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
       }
     </style>
   </head>
   <body>
-    <!-- Navbar placeholder -->
     <header class="full"></header>
-
-    <!-- Page main heading -->
     <h1 class="blogs-heading">Our Blogs</h1>
-
-    <!-- Container for all blog posts -->
     <div class="blog-container">
       <!-- First blog post -->
       <div class="episode">
@@ -91,12 +81,10 @@
             modern smartwatches, the integration of tech into design has
             revolutionized consumer trends.
           </p>
-          <!-- Read more link -->
           <a href="NegativeImpactOfTechnologyInTheWatchIndustry.html"
             >Read More→</a
           >
         </div>
-        <!-- Blog image -->
         <div class="image">
           <img
             src="https://i.pinimg.com/736x/62/d6/f0/62d6f080cc7ba92ae31d551ca84a7614.jpg"
@@ -115,10 +103,8 @@
             Mechanical watches are evolving with the introduction of digital
             features.
           </p>
-          <!-- Read more link -->
           <a href="HowTechnologyCanBoostWatchSales.html">Read More→</a>
         </div>
-        <!-- Blog image -->
         <div class="image">
           <img
             src="https://i.pinimg.com/736x/db/cb/4a/dbcb4a8b7125fa75bab673b7ba709f1d.jpg"
@@ -128,7 +114,7 @@
         </div>
       </div>
 
-      <!-- Additional blog posts follow the same structure -->
+      <!-- Additional blog posts -->
       <div class="episode">
         <div class="blog-content">
           <h2>About Technology in Watchmaking</h2>
@@ -196,9 +182,7 @@
       </div>
     </div>
 
-    <!-- Footer placeholder -->
     <footer class="footer"></footer>
-    <!-- External JavaScript file for navbar and footer -->
     <script src="Javascript/navbar_footer.js"></script>
   </body>
 </html>

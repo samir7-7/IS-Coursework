@@ -31,7 +31,7 @@ header.innerHTML = `
         <a href="blogs.html"><span>Blogs</span></a>
         <a href="aboutus.html"><span>About Us</span></a>
         <a href="contact.html"><span>Contact Us</span></a>
-        <a href="researchpage.html"><span>Research</span></a>
+        <a href="research.html"><span>Research</span></a>
       </div>
       <div class="sleft">
         <i><p>"Timeless Precision, Endless Possibilities"</p></i>
@@ -73,7 +73,7 @@ footer.innerHTML = `
         <a href="products.html">Products</a><span>|</span>
         <a href="aboutus.html">About Us</a><span>|</span>
         <a href="blogs.html">Blogs</a><span>|</span>
-        <a href="researchpage.html">Research</a><span>|</span>
+        <a href="research.html">Research</a><span>|</span>
         <a href="contact.html">Contact</a>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/* Styles for the team grid layout */
 .team-grid {
   display: flex;
   flex-direction: column;
@@ -5,45 +6,52 @@
   margin-top: 40px;
 }
 
-.ourmembers-wrapper{
+/* Wrapper for team members section */
+.ourmembers-wrapper {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+/* Individual team member card styles */
 .ourmembers {
   display: flex;
   background: var(--white);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth hover effect */
   min-height: 300px;
   align-items: center;
   height: 20vh;
 }
 
+/* Hover effect for team member cards */
 .ourmembers:hover {
   transform: translateY(-5px);
 }
 
+/* Image container */
 .figures {
   flex: 0 0 300px;
   position: relative;
   overflow: hidden;
 }
 
+/* Image styles */
 .figures img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
+/* Scale image on hover */
 .ourmembers:hover .figures img {
   transform: scale(1.1);
 }
 
+/* Description container for member details */
 .description {
   flex: 1;
   height: 20vh;
@@ -53,20 +61,22 @@
   justify-content: center;
 }
 
+/* Member name styles */
 .name h2 {
   font-size: 1.8em;
   margin-bottom: 4px;
   text-align: left;
 }
 
+/* Styles for contribution text */
 .contribution p {
   color: var(--text-light);
   line-height: 1.2;
   margin-bottom: 7px;
 }
 
-.email p{
+/* Styles for email text */
+.email p {
   margin-bottom: 5px;
   font-size: 15px;
 }
-
